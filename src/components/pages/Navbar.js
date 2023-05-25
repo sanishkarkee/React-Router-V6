@@ -35,6 +35,24 @@ const Navbar = () => {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to='/post/mobile'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? 'pink' : '' };
+            }}>
+            post
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to='/post/mobile/1'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? 'brown' : '' };
+            }}>
+            Post with ID
+          </NavLink>
+        </li>
       </ul>
     </>
   );
