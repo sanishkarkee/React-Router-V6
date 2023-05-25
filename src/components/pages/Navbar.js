@@ -7,26 +7,33 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
-      {/* <ul>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/about'>About</Link>
-        </li>
-        <li>
-          <Link to='/contact'>Contact</Link>
-        </li>
-      </ul> */}
       <ul>
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink
+            to='/'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? 'green' : '' };
+            }}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/about'>About</NavLink>
+          <NavLink
+            to='/about'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? 'purple' : '' };
+            }}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to='contact'>Contact</NavLink>
+          <NavLink
+            to='contact'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? 'yellow' : '' };
+            }}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </>
