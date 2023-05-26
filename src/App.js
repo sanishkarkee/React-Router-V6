@@ -11,9 +11,10 @@ import Navbar from './components/pages/Navbar';
 import Post from './components/pages/Post';
 import Dashboard from './components/pages/Dashboard';
 import Login from './components/pages/Login';
+import Logout from './components/pages/Logout';
 
 function App() {
-  let isLogged = false; //login chaina bhanera bujne
+  let isLogged = true; //login cha bhanera bujne
   let data = {
     st: 'This message is passed from DASHBOARD to LOGIN using STATE props in DASHBOARD Route',
   };
@@ -27,6 +28,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/logout' element={<Logout />} />
 
           {/*-For pages with catagories/ Dynamic Url- */}
           {/* yesma chai aba /post/ pachi j aauda ni huncha ,example /post/mobile,, /post/laptop  */}
@@ -57,3 +59,5 @@ function App() {
   );
 }
 export default App;
+
+// ------ Link for the video: " https://www.youtube.com/watch?v=x25vdOsMaqY "
